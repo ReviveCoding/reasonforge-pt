@@ -1,0 +1,8 @@
+claim_boundary,cross_role_jsd_psi_allowed,disposition,feature,performance_shift_distinguished,promotion_eligible,provenance_class,semantic_compatibility
+PARTIALLY_COMPARABLE,False,Normalize to broad instruction/reasoning/tool categories before cross-role divergence.,task_family,True,False,POST_CP100_RECONCILED_ANALYSIS,PARTIALLY_COMPARABLE
+NOT_COMPARABLE_ACROSS_ROLES,False,Synthetic TRAIN and public evaluation difficulty scales are not calibrated; C1/C2 allocations from the same pool remain comparable.,difficulty,True,False,POST_CP100_RECONCILED_ANALYSIS,NOT_COMPARABLE
+NOT_COMPARABLE_ACROSS_ROLES,False,Unavailable or constructed differently across roles.,reasoning_depth_proxy,True,False,POST_CP100_RECONCILED_ANALYSIS,NOT_COMPARABLE
+PARTIALLY_COMPARABLE,False,Evaluation counts share tokenizer semantics; source TRAIN token_count compatibility is not established.,prompt_tokens,True,False,POST_CP100_RECONCILED_ANALYSIS,PARTIALLY_COMPARABLE
+NOT_COMPARABLE_ACROSS_ROLES,False,Training completion characters and evaluation completion tokens differ and are post-outcome.,completion_length,True,False,POST_CP100_RECONCILED_ANALYSIS,NOT_COMPARABLE
+PARTIALLY_COMPARABLE,False,Constraint metadata coverage and construction differ by source.,instruction_complexity,True,False,POST_CP100_RECONCILED_ANALYSIS,PARTIALLY_COMPARABLE
+PARTIALLY_COMPARABLE,False,Tool-count coverage exists only for tool families and role construction differs.,tool_complexity,True,False,POST_CP100_RECONCILED_ANALYSIS,PARTIALLY_COMPARABLE

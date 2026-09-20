@@ -1,0 +1,50 @@
+[build-system]
+requires = ["setuptools>=65.5"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "reasonforge-pt"
+version = "0.1.0"
+description = "Evidence-controlled post-training and evaluation research"
+readme = "README.md"
+requires-python = ">=3.11,<3.13"
+license = { text = "Apache-2.0" }
+authors = [{ name = "ReasonForge-PT contributors" }]
+dependencies = [
+  "numpy>=2.2",
+  "scipy>=1.16",
+  "pydantic>=2.12",
+  "PyYAML>=6.0",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.4", "ruff>=0.13"]
+gpu = [
+  "accelerate>=1.10",
+  "bitsandbytes>=0.49",
+  "datasets>=4.0",
+  "peft>=0.18",
+  "safetensors>=0.6",
+  "torch>=2.7",
+  "transformers>=5.2",
+  "trl>=0.29",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+target-version = "py311"
+line-length = 100
+extend-exclude = [
+  "src/reasonforge/checkpoints/milestone_evidence.py",
+  "src/reasonforge/evaluation/e25_protected_execution.py",
+  "src/reasonforge/orchestration/four_b_cuda_runtime.py",
+  "src/reasonforge/systems/analysis.py",
+]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "SIM", "RUF"]

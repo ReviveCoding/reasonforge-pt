@@ -1,0 +1,177 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="920" height="1914" viewBox="0 0 920 1914">
+<rect width="100%" height="100%" fill="#fff"/>
+<text x="28" y="34" font-family="sans-serif" font-size="20">Bounded post-final robustness</text>
+<line x1="460" x2="460" y1="54" y2="1876" stroke="#555"/>
+<text x="20" y="83" font-family="sans-serif" font-size="12">D111:main:C1</text>
+<line x1="460" x2="790.0" y1="78" y2="78" stroke="#167d5a" stroke-width="9"/>
+<text x="798.0" y="83" font-family="monospace" font-size="11">+0.8333</text>
+<text x="20" y="115" font-family="sans-serif" font-size="12">D111:main:C2</text>
+<line x1="460" x2="724.0" y1="110" y2="110" stroke="#167d5a" stroke-width="9"/>
+<text x="732.0" y="115" font-family="monospace" font-size="11">+0.6667</text>
+<text x="20" y="147" font-family="sans-serif" font-size="12">D111:main:C1</text>
+<line x1="460" x2="790.0" y1="142" y2="142" stroke="#167d5a" stroke-width="9"/>
+<text x="798.0" y="147" font-family="monospace" font-size="11">+0.8333</text>
+<text x="20" y="179" font-family="sans-serif" font-size="12">D111:main:C2</text>
+<line x1="460" x2="724.0" y1="174" y2="174" stroke="#167d5a" stroke-width="9"/>
+<text x="732.0" y="179" font-family="monospace" font-size="11">+0.6667</text>
+<text x="20" y="211" font-family="sans-serif" font-size="12">D111:main:C1</text>
+<line x1="460" x2="724.0" y1="206" y2="206" stroke="#167d5a" stroke-width="9"/>
+<text x="732.0" y="211" font-family="monospace" font-size="11">+0.6667</text>
+<text x="20" y="243" font-family="sans-serif" font-size="12">D111:main:C2</text>
+<line x1="460" x2="790.0" y1="238" y2="238" stroke="#167d5a" stroke-width="9"/>
+<text x="798.0" y="243" font-family="monospace" font-size="11">+0.8333</text>
+<text x="20" y="275" font-family="sans-serif" font-size="12">D111:p1:C1</text>
+<line x1="460" x2="460.0" y1="270" y2="270" stroke="#167d5a" stroke-width="9"/>
+<text x="470" y="275" font-family="monospace" font-size="11">+0.0000</text>
+<text x="20" y="307" font-family="sans-serif" font-size="12">D111:p1:C2</text>
+<line x1="460" x2="460.0" y1="302" y2="302" stroke="#167d5a" stroke-width="9"/>
+<text x="470" y="307" font-family="monospace" font-size="11">+0.0000</text>
+<text x="20" y="339" font-family="sans-serif" font-size="12">D111:p1:C1</text>
+<line x1="460" x2="460.0" y1="334" y2="334" stroke="#167d5a" stroke-width="9"/>
+<text x="470" y="339" font-family="monospace" font-size="11">+0.0000</text>
+<text x="20" y="371" font-family="sans-serif" font-size="12">D111:p1:C2</text>
+<line x1="460" x2="460.0" y1="366" y2="366" stroke="#167d5a" stroke-width="9"/>
+<text x="470" y="371" font-family="monospace" font-size="11">+0.0000</text>
+<text x="20" y="403" font-family="sans-serif" font-size="12">D111:p1:C1</text>
+<line x1="460" x2="460.0" y1="398" y2="398" stroke="#167d5a" stroke-width="9"/>
+<text x="470" y="403" font-family="monospace" font-size="11">+0.0000</text>
+<text x="20" y="435" font-family="sans-serif" font-size="12">D111:p1:C2</text>
+<line x1="460" x2="460.0" y1="430" y2="430" stroke="#167d5a" stroke-width="9"/>
+<text x="470" y="435" font-family="monospace" font-size="11">+0.0000</text>
+<text x="20" y="467" font-family="sans-serif" font-size="12">D111:p2:C1</text>
+<line x1="460" x2="592.0" y1="462" y2="462" stroke="#167d5a" stroke-width="9"/>
+<text x="600.0" y="467" font-family="monospace" font-size="11">+0.3333</text>
+<text x="20" y="499" font-family="sans-serif" font-size="12">D111:p2:C2</text>
+<line x1="460" x2="592.0" y1="494" y2="494" stroke="#167d5a" stroke-width="9"/>
+<text x="600.0" y="499" font-family="monospace" font-size="11">+0.3333</text>
+<text x="20" y="531" font-family="sans-serif" font-size="12">D111:p2:C1</text>
+<line x1="460" x2="592.0" y1="526" y2="526" stroke="#167d5a" stroke-width="9"/>
+<text x="600.0" y="531" font-family="monospace" font-size="11">+0.3333</text>
+<text x="20" y="563" font-family="sans-serif" font-size="12">D111:p2:C2</text>
+<line x1="460" x2="592.0" y1="558" y2="558" stroke="#167d5a" stroke-width="9"/>
+<text x="600.0" y="563" font-family="monospace" font-size="11">+0.3333</text>
+<text x="20" y="595" font-family="sans-serif" font-size="12">D111:p2:C1</text>
+<line x1="460" x2="592.0" y1="590" y2="590" stroke="#167d5a" stroke-width="9"/>
+<text x="600.0" y="595" font-family="monospace" font-size="11">+0.3333</text>
+<text x="20" y="627" font-family="sans-serif" font-size="12">D111:p2:C2</text>
+<line x1="460" x2="592.0" y1="622" y2="622" stroke="#167d5a" stroke-width="9"/>
+<text x="600.0" y="627" font-family="monospace" font-size="11">+0.3333</text>
+<text x="20" y="659" font-family="sans-serif" font-size="12">D111:main:C2_MINUS_C1</text>
+<line x1="460" x2="394.0" y1="654" y2="654" stroke="#b33a3a" stroke-width="9"/>
+<text x="470" y="659" font-family="monospace" font-size="11">-0.1667</text>
+<text x="20" y="691" font-family="sans-serif" font-size="12">D111:main:C2_MINUS_C1</text>
+<line x1="460" x2="394.0" y1="686" y2="686" stroke="#b33a3a" stroke-width="9"/>
+<text x="470" y="691" font-family="monospace" font-size="11">-0.1667</text>
+<text x="20" y="723" font-family="sans-serif" font-size="12">D111:main:C2_MINUS_C1</text>
+<line x1="460" x2="526.0" y1="718" y2="718" stroke="#167d5a" stroke-width="9"/>
+<text x="534.0" y="723" font-family="monospace" font-size="11">+0.1667</text>
+<text x="20" y="755" font-family="sans-serif" font-size="12">D111:p1:C2_MINUS_C1</text>
+<line x1="460" x2="460.0" y1="750" y2="750" stroke="#167d5a" stroke-width="9"/>
+<text x="470" y="755" font-family="monospace" font-size="11">+0.0000</text>
+<text x="20" y="787" font-family="sans-serif" font-size="12">D111:p1:C2_MINUS_C1</text>
+<line x1="460" x2="460.0" y1="782" y2="782" stroke="#167d5a" stroke-width="9"/>
+<text x="470" y="787" font-family="monospace" font-size="11">+0.0000</text>
+<text x="20" y="819" font-family="sans-serif" font-size="12">D111:p1:C2_MINUS_C1</text>
+<line x1="460" x2="460.0" y1="814" y2="814" stroke="#167d5a" stroke-width="9"/>
+<text x="470" y="819" font-family="monospace" font-size="11">+0.0000</text>
+<text x="20" y="851" font-family="sans-serif" font-size="12">D111:p2:C2_MINUS_C1</text>
+<line x1="460" x2="460.0" y1="846" y2="846" stroke="#167d5a" stroke-width="9"/>
+<text x="470" y="851" font-family="monospace" font-size="11">+0.0000</text>
+<text x="20" y="883" font-family="sans-serif" font-size="12">D111:p2:C2_MINUS_C1</text>
+<line x1="460" x2="460.0" y1="878" y2="878" stroke="#167d5a" stroke-width="9"/>
+<text x="470" y="883" font-family="monospace" font-size="11">+0.0000</text>
+<text x="20" y="915" font-family="sans-serif" font-size="12">D111:p2:C2_MINUS_C1</text>
+<line x1="460" x2="460.0" y1="910" y2="910" stroke="#167d5a" stroke-width="9"/>
+<text x="470" y="915" font-family="monospace" font-size="11">+0.0000</text>
+<text x="20" y="947" font-family="sans-serif" font-size="12">D111B:formatting_neutral_wrapper:C1</text>
+<line x1="460" x2="757.0" y1="942" y2="942" stroke="#167d5a" stroke-width="9"/>
+<text x="765.0" y="947" font-family="monospace" font-size="11">+0.7500</text>
+<text x="20" y="979" font-family="sans-serif" font-size="12">D111B:formatting_neutral_wrapper:C2</text>
+<line x1="460" x2="768.0" y1="974" y2="974" stroke="#167d5a" stroke-width="9"/>
+<text x="776.0" y="979" font-family="monospace" font-size="11">+0.7778</text>
+<text x="20" y="1011" font-family="sans-serif" font-size="12">D111B:formatting_neutral_wrapper:C1</text>
+<line x1="460" x2="757.0" y1="1006" y2="1006" stroke="#167d5a" stroke-width="9"/>
+<text x="765.0" y="1011" font-family="monospace" font-size="11">+0.7500</text>
+<text x="20" y="1043" font-family="sans-serif" font-size="12">D111B:formatting_neutral_wrapper:C2</text>
+<line x1="460" x2="713.0" y1="1038" y2="1038" stroke="#167d5a" stroke-width="9"/>
+<text x="721.0" y="1043" font-family="monospace" font-size="11">+0.6389</text>
+<text x="20" y="1075" font-family="sans-serif" font-size="12">D111B:formatting_neutral_wrapper:C1</text>
+<line x1="460" x2="757.0" y1="1070" y2="1070" stroke="#167d5a" stroke-width="9"/>
+<text x="765.0" y="1075" font-family="monospace" font-size="11">+0.7500</text>
+<text x="20" y="1107" font-family="sans-serif" font-size="12">D111B:formatting_neutral_wrapper:C2</text>
+<line x1="460" x2="757.0" y1="1102" y2="1102" stroke="#167d5a" stroke-width="9"/>
+<text x="765.0" y="1107" font-family="monospace" font-size="11">+0.7500</text>
+<text x="20" y="1139" font-family="sans-serif" font-size="12">D111C:available_tool_order:C1</text>
+<line x1="460" x2="658.0" y1="1134" y2="1134" stroke="#167d5a" stroke-width="9"/>
+<text x="666.0" y="1139" font-family="monospace" font-size="11">+0.5000</text>
+<text x="20" y="1171" font-family="sans-serif" font-size="12">D111C:available_tool_order:C2</text>
+<line x1="460" x2="559.0" y1="1166" y2="1166" stroke="#167d5a" stroke-width="9"/>
+<text x="567.0" y="1171" font-family="monospace" font-size="11">+0.2500</text>
+<text x="20" y="1203" font-family="sans-serif" font-size="12">D111C:available_tool_order:C1</text>
+<line x1="460" x2="460.0" y1="1198" y2="1198" stroke="#167d5a" stroke-width="9"/>
+<text x="470" y="1203" font-family="monospace" font-size="11">+0.0000</text>
+<text x="20" y="1235" font-family="sans-serif" font-size="12">D111C:available_tool_order:C2</text>
+<line x1="460" x2="658.0" y1="1230" y2="1230" stroke="#167d5a" stroke-width="9"/>
+<text x="666.0" y="1235" font-family="monospace" font-size="11">+0.5000</text>
+<text x="20" y="1267" font-family="sans-serif" font-size="12">D111C:available_tool_order:C1</text>
+<line x1="460" x2="460.0" y1="1262" y2="1262" stroke="#167d5a" stroke-width="9"/>
+<text x="470" y="1267" font-family="monospace" font-size="11">+0.0000</text>
+<text x="20" y="1299" font-family="sans-serif" font-size="12">D111C:available_tool_order:C2</text>
+<line x1="460" x2="658.0" y1="1294" y2="1294" stroke="#167d5a" stroke-width="9"/>
+<text x="666.0" y="1299" font-family="monospace" font-size="11">+0.5000</text>
+<text x="20" y="1331" font-family="sans-serif" font-size="12">D111C:equivalent_description_formatting:C1</text>
+<line x1="460" x2="460.0" y1="1326" y2="1326" stroke="#167d5a" stroke-width="9"/>
+<text x="470" y="1331" font-family="monospace" font-size="11">+0.0000</text>
+<text x="20" y="1363" font-family="sans-serif" font-size="12">D111C:equivalent_description_formatting:C2</text>
+<line x1="460" x2="460.0" y1="1358" y2="1358" stroke="#167d5a" stroke-width="9"/>
+<text x="470" y="1363" font-family="monospace" font-size="11">+0.0000</text>
+<text x="20" y="1395" font-family="sans-serif" font-size="12">D111C:equivalent_description_formatting:C1</text>
+<line x1="460" x2="460.0" y1="1390" y2="1390" stroke="#167d5a" stroke-width="9"/>
+<text x="470" y="1395" font-family="monospace" font-size="11">+0.0000</text>
+<text x="20" y="1427" font-family="sans-serif" font-size="12">D111C:equivalent_description_formatting:C2</text>
+<line x1="460" x2="460.0" y1="1422" y2="1422" stroke="#167d5a" stroke-width="9"/>
+<text x="470" y="1427" font-family="monospace" font-size="11">+0.0000</text>
+<text x="20" y="1459" font-family="sans-serif" font-size="12">D111C:equivalent_description_formatting:C1</text>
+<line x1="460" x2="460.0" y1="1454" y2="1454" stroke="#167d5a" stroke-width="9"/>
+<text x="470" y="1459" font-family="monospace" font-size="11">+0.0000</text>
+<text x="20" y="1491" font-family="sans-serif" font-size="12">D111C:equivalent_description_formatting:C2</text>
+<line x1="460" x2="460.0" y1="1486" y2="1486" stroke="#167d5a" stroke-width="9"/>
+<text x="470" y="1491" font-family="monospace" font-size="11">+0.0000</text>
+<text x="20" y="1523" font-family="sans-serif" font-size="12">D111C:irrelevant_tool_injection:C1</text>
+<line x1="460" x2="658.0" y1="1518" y2="1518" stroke="#167d5a" stroke-width="9"/>
+<text x="666.0" y="1523" font-family="monospace" font-size="11">+0.5000</text>
+<text x="20" y="1555" font-family="sans-serif" font-size="12">D111C:irrelevant_tool_injection:C2</text>
+<line x1="460" x2="559.0" y1="1550" y2="1550" stroke="#167d5a" stroke-width="9"/>
+<text x="567.0" y="1555" font-family="monospace" font-size="11">+0.2500</text>
+<text x="20" y="1587" font-family="sans-serif" font-size="12">D111C:irrelevant_tool_injection:C1</text>
+<line x1="460" x2="559.0" y1="1582" y2="1582" stroke="#167d5a" stroke-width="9"/>
+<text x="567.0" y="1587" font-family="monospace" font-size="11">+0.2500</text>
+<text x="20" y="1619" font-family="sans-serif" font-size="12">D111C:irrelevant_tool_injection:C2</text>
+<line x1="460" x2="559.0" y1="1614" y2="1614" stroke="#167d5a" stroke-width="9"/>
+<text x="567.0" y="1619" font-family="monospace" font-size="11">+0.2500</text>
+<text x="20" y="1651" font-family="sans-serif" font-size="12">D111C:irrelevant_tool_injection:C1</text>
+<line x1="460" x2="658.0" y1="1646" y2="1646" stroke="#167d5a" stroke-width="9"/>
+<text x="666.0" y="1651" font-family="monospace" font-size="11">+0.5000</text>
+<text x="20" y="1683" font-family="sans-serif" font-size="12">D111C:irrelevant_tool_injection:C2</text>
+<line x1="460" x2="658.0" y1="1678" y2="1678" stroke="#167d5a" stroke-width="9"/>
+<text x="666.0" y="1683" font-family="monospace" font-size="11">+0.5000</text>
+<text x="20" y="1715" font-family="sans-serif" font-size="12">D111C:parameter_order:C1</text>
+<line x1="460" x2="559.0" y1="1710" y2="1710" stroke="#167d5a" stroke-width="9"/>
+<text x="567.0" y="1715" font-family="monospace" font-size="11">+0.2500</text>
+<text x="20" y="1747" font-family="sans-serif" font-size="12">D111C:parameter_order:C2</text>
+<line x1="460" x2="460.0" y1="1742" y2="1742" stroke="#167d5a" stroke-width="9"/>
+<text x="470" y="1747" font-family="monospace" font-size="11">+0.0000</text>
+<text x="20" y="1779" font-family="sans-serif" font-size="12">D111C:parameter_order:C1</text>
+<line x1="460" x2="559.0" y1="1774" y2="1774" stroke="#167d5a" stroke-width="9"/>
+<text x="567.0" y="1779" font-family="monospace" font-size="11">+0.2500</text>
+<text x="20" y="1811" font-family="sans-serif" font-size="12">D111C:parameter_order:C2</text>
+<line x1="460" x2="460.0" y1="1806" y2="1806" stroke="#167d5a" stroke-width="9"/>
+<text x="470" y="1811" font-family="monospace" font-size="11">+0.0000</text>
+<text x="20" y="1843" font-family="sans-serif" font-size="12">D111C:parameter_order:C1</text>
+<line x1="460" x2="460.0" y1="1838" y2="1838" stroke="#167d5a" stroke-width="9"/>
+<text x="470" y="1843" font-family="monospace" font-size="11">+0.0000</text>
+<text x="20" y="1875" font-family="sans-serif" font-size="12">D111C:parameter_order:C2</text>
+<line x1="460" x2="460.0" y1="1870" y2="1870" stroke="#167d5a" stroke-width="9"/>
+<text x="470" y="1875" font-family="monospace" font-size="11">+0.0000</text>
+<text x="430" y="1902" font-family="sans-serif" font-size="12">descriptive score</text>
+</svg>

@@ -1,0 +1,69 @@
+schema_version: 2
+contract_id: RFPT-C1-C2-FAIRNESS-v2
+protocol_id: RFPT-E39-4B-SCALE-TRANSFER-v1
+status: FROZEN_AUTHORITATIVE
+supersedes_invalid_preserved: configs/analysis/c1_c2_fairness_contract_v1.yaml
+source_recipe: configs/e39/original_common_recipe_v1.yaml
+scope: E42_E47_4B_DEVELOPMENT_AND_FUTURE_LOCKED_FINAL
+common_initialization:
+  identity: RFPT-I4B-v1
+  model_id: Qwen/Qwen3-4B
+  model_revision: 1cfa9a7208912126459214e8b04321603b3df60c
+  adapter_identity_sha256: e416f4b88e8d59c6dc6b3abff70851b08be1e2860875914e9e99a843333c7701
+invariants:
+  dataset_rows: identical_by_stable_example_id
+  row_order: identical_before_sampler_selection
+  reward_architecture: terminal
+  reward_config_sha256: a37e004cf5baa2f45e332b441ea94c1ff1b92851dfe1c24497143e6ed20b104b
+  optimizer: adamw_torch_fused
+  learning_rate: 0.000001
+  warmup_steps: 1
+  weight_decay: 0.0
+  optimizer_steps: 32
+  rollout_groups: 64
+  rollouts_total: 512
+  generations_per_group: 8
+  max_prompt_tokens: 1152
+  max_completion_tokens: 256
+  temperature: 1.0
+  top_p: 1.0
+  top_k: 0
+  enable_thinking: false
+  microbatch_size: 1
+  gradient_accumulation_steps: 16
+  compute_dtype: bfloat16
+  quantization: nf4_double_quantization
+  gradient_checkpointing: true
+  lora_rank: 8
+  lora_alpha: 16
+  lora_dropout: 0.05
+  lora_target_modules: [q_proj, v_proj]
+  beta: 0.0
+  epsilon: 0.2
+  num_iterations: 1
+  scale_rewards: group
+  mask_truncated_completions: false
+  shuffle_dataset: false
+  checkpoint_steps: [8, 16, 24, 32]
+  deterministic_checkpointing: true
+permitted_difference:
+  field: curriculum_sampler
+  C1: frozen_uniform_sampler
+  C2: frozen_rcac_sampler_using_parent_E12_estimates_only
+  rcac_estimates_sha256: cf85a06397acc8b8c713de86d2e3739cec6a3a70589cd6b0f416f3ebd79c1b28
+seed_policy:
+  pilot: 1701
+  conditional_replication: [1702, 1703]
+  seed_specific_changes_forbidden: true
+evaluation_fairness:
+  prompts: byte_identical_within_seed
+  generation_config: identical_within_seed
+  deterministic_scorers: identical_and_hash_bound
+  paired_statistics: stable_example_id
+  missingness: fail_closed_no_arm_specific_imputation
+forbidden:
+  - threshold_tuning_from_LOCKED_FINAL
+  - arm_specific_generation_limits
+  - arm_specific_early_stopping
+  - outcome_based_checkpoint_selection
+  - retrospective_promotion_from_exploratory_slices

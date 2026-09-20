@@ -1,0 +1,7 @@
+cff-version: 1.2.0
+message: "If you use this software or its public aggregate results, please cite this repository."
+title: "ReasonForge-PT: Evidence-controlled post-training and evaluation on Qwen3-4B"
+type: software
+authors:
+  - name: "ReasonForge-PT contributors"
+version: "0.1.0"

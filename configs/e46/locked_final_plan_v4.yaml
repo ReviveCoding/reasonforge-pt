@@ -1,0 +1,67 @@
+schema_version: 1
+protocol_id: RFPT-E39-4B-SCALE-TRANSFER-v1
+experiment_id: E46
+plan_id: RFPT-E46-LOCKED-FINAL-PLAN-v4
+scientific_state: LOCKED_FINAL
+status: READY_FOR_CP95C_SEED1703_C2_RECOVERY_AMENDMENT
+dataset:
+  id: RFPT-E46-public-v1
+  path: data/locked_final/RFPT-E46-public-v1/evaluation_rows.jsonl
+  sha256: c7e5ab8355c2dc54658f2bbb5544209cba8924a403107aef8ecbecb94316436a
+  rows: 150
+model:
+  id: Qwen/Qwen3-4B
+  revision: 1cfa9a7208912126459214e8b04321603b3df60c
+generation:
+  do_sample: false
+  max_new_tokens: 256
+  batch_size: 2
+  enable_thinking: false
+  bounded_memory: true
+  compute_dtype: bfloat16
+  quantization: nf4_double_quantization
+scoring:
+  instruction: ifeval_strict_constraint_fraction_v1
+  reasoning: gsm8k_final_numeric_exact_v1
+  tool: bfcl_multiple_ast_subset_v1
+  deterministic: true
+  llm_judge: forbidden
+primary_decision:
+  endpoint: equal_seed_mean_of_paired_task_score_difference_C2_minus_C1
+  interval: seed_stratified_paired_bootstrap_95_percent
+  bootstrap_replicates: 20000
+  bootstrap_seed: 47095
+  practical_effect_threshold: 0.03
+  promotion_rule:
+    all:
+      - pooled_mean_difference_gte_0.03
+      - bootstrap_lower_bound_gt_0
+      - every_seed_difference_gt_0
+  failure_action: RETAIN_CONVENTIONAL_4B
+  confirmatory_slices_cannot_override_primary: true
+confirmatory_slice_testing:
+  family: RFPT-4B-CONFIRMATORY-SLICES-v1
+  method: Holm
+  alpha: 0.05
+  practical_effect_threshold: 0.03
+  claim_rule: mean_difference_gte_0.03_and_adjusted_p_lt_0.05_and_interval_lower_gt_0
+runs:
+  - {run_id: E46-C0-locked-final-v3, arm: C0, seed: 0, adapter_path: null, adapter_identity_sha256: BASE_MODEL_NO_ADAPTER}
+  - {run_id: E46-I4B-locked-final-seed1710-v1, arm: I4B, seed: 1710, adapter_path: artifacts/training/E40/E40-I4B-reconstruction-seed1710-v1/final_adapter, adapter_identity_sha256: e416f4b88e8d59c6dc6b3abff70851b08be1e2860875914e9e99a843333c7701}
+  - {run_id: E46-C1-locked-final-seed1701-v1, arm: C1, seed: 1701, adapter_path: artifacts/training/E43/E43-C1-full-seed1701-v1/final_adapter, adapter_identity_sha256: 519d447e1360d29bc913ed6d42fcdbee0ad2481c84a73c0ef6144bcb494b338b}
+  - {run_id: E46-C2-locked-final-seed1701-v1, arm: C2, seed: 1701, adapter_path: artifacts/training/E43/E43-C2-full-seed1701-v1/final_adapter, adapter_identity_sha256: e8231d458f5d4946638cc10f4fa9b17b553fad945cd63460e69e1fc055187262}
+  - {run_id: E46-C1-locked-final-seed1702-v1, arm: C1, seed: 1702, adapter_path: artifacts/training/E45/E45-C1-full-seed1702-v3/final_adapter, adapter_identity_sha256: 9e272d5e0fa2bef915ac59cdc8025b0543a8c9df358ee3d7209ef7b7738f3e56}
+  - {run_id: E46-C2-locked-final-seed1702-v1, arm: C2, seed: 1702, adapter_path: artifacts/training/E45/E45-C2-full-seed1702-v4/final_adapter, adapter_identity_sha256: 7d1b52cb04bf7108cadead33442187a91056cc2d81fc3e3321b8d2cba2041673}
+  - {run_id: E46-C1-locked-final-seed1703-v1, arm: C1, seed: 1703, adapter_path: artifacts/training/E45/E45-C1-full-seed1703-v1/final_adapter, adapter_identity_sha256: 485fcc6a290ba0aaf7568c81f47e4c2dd6121cd4d6189c21f0adcdf841890d8a}
+  - {run_id: E46-C2-locked-final-seed1703-v2, arm: C2, seed: 1703, adapter_path: artifacts/training/E45/E45-C2-full-seed1703-v1/final_adapter, adapter_identity_sha256: a2b9e79b395c1993405ff975ad0aa156b0c77d4e306e6f92d418b18d60424c96}
+execution_order:
+  - E46-C0-locked-final-v3
+  - E46-I4B-locked-final-seed1710-v1
+  - E46-C1-locked-final-seed1701-v1
+  - E46-C2-locked-final-seed1701-v1
+  - E46-C1-locked-final-seed1702-v1
+  - E46-C2-locked-final-seed1702-v1
+  - E46-C1-locked-final-seed1703-v1
+  - E46-C2-locked-final-seed1703-v2
+missingness: fail_closed_no_arm_specific_imputation
+single_heavy_cuda_owner: true

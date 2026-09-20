@@ -1,0 +1,114 @@
+schema_version: 1
+protocol_id: RFPT-E39-4B-SCALE-TRANSFER-v1
+freeze_id: RFPT-E39-ORIGINAL-COMMON-RECIPE-v1
+status: FROZEN
+historical_predecessor:
+  protocol_id: RFPT-E36-4B-TRANSFER-v1
+  disposition: BLOCKED_PROTOCOL_UNDERSPECIFIED
+  rewritten: false
+model:
+  model_id: Qwen/Qwen3-4B
+  revision: 1cfa9a7208912126459214e8b04321603b3df60c
+  expected_weight_bytes: 8044982000
+  expected_physical_gpu_count: 1
+  expected_gpu_name: NVIDIA GeForce RTX 4090 Laptop GPU
+data:
+  train_path: data/imported/cp90/reasonforge_synthetic_v2/train.parquet
+  train_sha256: a0f129f0df1a308fe561077616344053569aa99d351d082d34b5aedfe0e6671e
+  train_role: TRAIN
+  development_path: data/imported/cp90/reasonforge_synthetic_v2/development.parquet
+  development_sha256: f809dfda15b145f225d3b40944f1c4052345c61e2ae4463da4397e1d75b5afa3
+  development_role: DEVELOPMENT
+i4b_reconstruction:
+  source_stage: E10
+  objective: SFT
+  starting_checkpoint: PINNED_QWEN3_4B
+  transfer_1_7b_adapter_tensors: false
+  initialization: FRESH_4B_QLORA_ADAPTER
+  seed: 1710
+  data_seed: 1710
+  max_steps: 60
+  max_length: 1024
+  microbatch: 1
+  gradient_accumulation_steps: 8
+  learning_rate: 0.0002
+  warmup_steps: 3
+  adapter:
+    target_modules: [q_proj, v_proj]
+    rank: 8
+    alpha: 16
+    dropout: 0.05
+    use_rslora: false
+common_grpo:
+  starting_checkpoint: I4B
+  objective: GRPO
+  reward_architecture: terminal
+  reward_config_sha256: a37e004cf5baa2f45e332b441ea94c1ff1b92851dfe1c24497143e6ed20b104b
+  optimizer_steps: 32
+  rollout_groups: 64
+  rollouts: 512
+  num_generations: 8
+  max_prompt_tokens: 1152
+  max_completion_tokens: 256
+  temperature: 1.0
+  top_p: 1.0
+  top_k: 0
+  thinking_enabled: false
+  microbatch: 1
+  gradient_accumulation_steps: 16
+  learning_rate: 0.000001
+  warmup_steps: 1
+  weight_decay: 0.0
+  optimizer: adamw_torch_fused
+  adam_beta1: 0.9
+  adam_beta2: 0.999
+  adam_epsilon: 0.00000001
+  max_grad_norm: 1.0
+  lr_scheduler_type: linear
+  beta: 0.0
+  epsilon: 0.2
+  num_iterations: 1
+  scale_rewards: group
+  mask_truncated_completions: false
+  shuffle_dataset: false
+  adapter:
+    target_modules: [q_proj, v_proj]
+    rank: 8
+    alpha: 16
+    dropout: 0.05
+    use_rslora: false
+  runtime:
+    qlora: true
+    quantization: NF4
+    double_quantization: true
+    compute_dtype: BF16
+    gradient_checkpointing: true
+    gradient_checkpointing_use_reentrant: false
+    deterministic_checkpointing: true
+arms:
+  C0:
+    role: PINNED_4B_REFERENCE
+    trainable: false
+  I4B:
+    role: COMMON_4B_SFT_INITIALIZATION
+    source_recipe: E10_EQUIVALENT
+  C1:
+    role: CONVENTIONAL_TERMINAL_GRPO
+    sampler: uniform
+  C2:
+    role: RCAC_TERMINAL_GRPO
+    sampler: rcac
+    adaptive_estimate_policy: TRANSFER_FROZEN_1_7B_E12_ESTIMATES
+    adaptive_estimates_sha256: cf85a06397acc8b8c713de86d2e3739cec6a3a70589cd6b0f416f3ebd79c1b28
+fairness:
+  shared_i4b_identity_required: true
+  exact_training_task_pool_shared: true
+  exact_global_rollout_budget_shared: true
+  exact_reward_shared: true
+  only_planned_difference: SAMPLER
+  seeds: [1701, 1702, 1703]
+  pilot_seed: 1701
+protected_data_policy:
+  locked_final_4b_access_before_cp95: false
+  locked_final_4b_outcomes_may_define_slices: false
+  development_only_before_cp95: true

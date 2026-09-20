@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "artifact_role": "DERIVED_PUBLIC_PACKAGING_SUMMARY",
+  "original_cp110_manifest": false,
+  "source_release_identity": "CP110_POST_CP100_ANALYTICS_COMPLETE",
+  "scientific_decision": "RETAIN_CONVENTIONAL_4B",
+  "model": {
+    "id": "Qwen/Qwen3-4B",
+    "revision": "1cfa9a7208912126459214e8b04321603b3df60c"
+  },
+  "design": {
+    "seeds": [1701, 1702, 1703],
+    "locked_unique_examples": 150,
+    "locked_seed_example_cells": 450,
+    "c1": "conventional uniform task sampling",
+    "c2": "RCAC adaptive task sampling",
+    "shared_start": "frozen common 4B SFT/QLoRA adapter"
+  },
+  "primary_result": {
+    "c2_minus_c1": 0.008518518518518517,
+    "seed_stratified_95_percent_interval": [-0.006296296296296297, 0.025555555555555557],
+    "frozen_promotion_threshold": 0.03,
+    "promotion_gate_met": false,
+    "rcac_superiority_established": false
+  },
+  "diagnostic_counts": {
+    "evaluation_units": 1452,
+    "matched_pairs": 558,
+    "stochastic_rollouts": 1800,
+    "corrected_d114r_rows": 432,
+    "corrected_d115r_rows": 144,
+    "blinded_human_review_pairs": 60
+  },
+  "diagnostic_findings": {
+    "routing": "NO_ROBUST_ROUTING_BENEFIT",
+    "uncertainty": "UNCERTAINTY_QUALITY_ASSOCIATION",
+    "human_labels": "PENDING",
+    "scientific_role": "POST_CP100_DIAGNOSTIC_ONLY",
+    "promotion_eligible": false,
+    "retraining": false
+  },
+  "internal_release_validation": {
+    "bound_artifacts": 167,
+    "adversarial_checks_passed": 37,
+    "adversarial_checks_total": 37,
+    "tests_passed": 16,
+    "expected_xfails": 1,
+    "source_snapshots_unchanged": true,
+    "final_adversarial_review": "PASS"
+  },
+  "limitations": [
+    "Three-seed population inference is limited.",
+    "Public-benchmark pretraining contamination cannot be excluded.",
+    "Post-final diagnostics do not alter the frozen primary decision.",
+    "Uncertainty proxies are not calibrated production or safety probabilities.",
+    "Human labels are pending."
+  ]
+}

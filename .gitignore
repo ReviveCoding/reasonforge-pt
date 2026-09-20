@@ -1,0 +1,28 @@
+# Local Python and test state
+.venv/
+.venv-ci/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.coverage
+*.egg-info/
+dist/
+build/
+
+# Research runtime and model artifacts are deliberately not distributed.
+.cache/
+.tmp/
+/artifacts/
+/checkpoints/
+/models/
+*.safetensors
+*.pt
+*.pth
+*.ckpt
+*.bin
+*.parquet
+*.jsonl
+*.log
+*.lock
+*.tmp

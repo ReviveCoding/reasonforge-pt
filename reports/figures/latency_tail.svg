@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="920" height="346" viewBox="0 0 920 346">
+<rect width="100%" height="100%" fill="#fff"/>
+<text x="28" y="34" font-family="sans-serif" font-size="20">D115R arm-block p95 latency</text>
+<line x1="460" x2="460" y1="54" y2="308" stroke="#555"/>
+<text x="20" y="83" font-family="sans-serif" font-size="12">b0:C1</text>
+<line x1="460" x2="783.1337493141498" y1="78" y2="78" stroke="#167d5a" stroke-width="9"/>
+<text x="791.1337493141498" y="83" font-family="monospace" font-size="11">+45.8186</text>
+<text x="20" y="115" font-family="sans-serif" font-size="12">b0:C2</text>
+<line x1="460" x2="774.2780018304559" y1="110" y2="110" stroke="#167d5a" stroke-width="9"/>
+<text x="782.2780018304559" y="115" font-family="monospace" font-size="11">+44.5629</text>
+<text x="20" y="147" font-family="sans-serif" font-size="12">b1:C2</text>
+<line x1="460" x2="790.0" y1="142" y2="142" stroke="#167d5a" stroke-width="9"/>
+<text x="798.0" y="147" font-family="monospace" font-size="11">+46.7922</text>
+<text x="20" y="179" font-family="sans-serif" font-size="12">b1:C1</text>
+<line x1="460" x2="779.1740022443537" y1="174" y2="174" stroke="#167d5a" stroke-width="9"/>
+<text x="787.1740022443537" y="179" font-family="monospace" font-size="11">+45.2571</text>
+<text x="20" y="211" font-family="sans-serif" font-size="12">b2:C1</text>
+<line x1="460" x2="788.6423952034445" y1="206" y2="206" stroke="#167d5a" stroke-width="9"/>
+<text x="796.6423952034445" y="211" font-family="monospace" font-size="11">+46.5997</text>
+<text x="20" y="243" font-family="sans-serif" font-size="12">b2:C2</text>
+<line x1="460" x2="766.1862130050065" y1="238" y2="238" stroke="#167d5a" stroke-width="9"/>
+<text x="774.1862130050065" y="243" font-family="monospace" font-size="11">+43.4155</text>
+<text x="20" y="275" font-family="sans-serif" font-size="12">b3:C2</text>
+<line x1="460" x2="767.6323830635636" y1="270" y2="270" stroke="#167d5a" stroke-width="9"/>
+<text x="775.6323830635636" y="275" font-family="monospace" font-size="11">+43.6206</text>
+<text x="20" y="307" font-family="sans-serif" font-size="12">b3:C1</text>
+<line x1="460" x2="764.1450541597708" y1="302" y2="302" stroke="#167d5a" stroke-width="9"/>
+<text x="772.1450541597708" y="307" font-family="monospace" font-size="11">+43.1261</text>
+<text x="430" y="334" font-family="sans-serif" font-size="12">seconds</text>
+</svg>

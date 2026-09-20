@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="920" height="410" viewBox="0 0 920 410">
+<rect width="100%" height="100%" fill="#fff"/>
+<text x="28" y="34" font-family="sans-serif" font-size="20">Example-held-out uncertainty-quality association</text>
+<line x1="460" x2="460" y1="54" y2="372" stroke="#555"/>
+<text x="20" y="83" font-family="sans-serif" font-size="12">0.1</text>
+<line x1="460" x2="742.1989528795812" y1="78" y2="78" stroke="#167d5a" stroke-width="9"/>
+<text x="750.1989528795812" y="83" font-family="monospace" font-size="11">+0.2722</text>
+<text x="20" y="115" font-family="sans-serif" font-size="12">0.2</text>
+<line x1="460" x2="713.4031413612565" y1="110" y2="110" stroke="#167d5a" stroke-width="9"/>
+<text x="721.4031413612565" y="115" font-family="monospace" font-size="11">+0.2444</text>
+<text x="20" y="147" font-family="sans-serif" font-size="12">0.3</text>
+<line x1="460" x2="705.7242582897034" y1="142" y2="142" stroke="#167d5a" stroke-width="9"/>
+<text x="713.7242582897034" y="147" font-family="monospace" font-size="11">+0.2370</text>
+<text x="20" y="179" font-family="sans-serif" font-size="12">0.4</text>
+<line x1="460" x2="745.0785340314137" y1="174" y2="174" stroke="#167d5a" stroke-width="9"/>
+<text x="753.0785340314137" y="179" font-family="monospace" font-size="11">+0.2750</text>
+<text x="20" y="211" font-family="sans-serif" font-size="12">0.5</text>
+<line x1="460" x2="736.4397905759163" y1="206" y2="206" stroke="#167d5a" stroke-width="9"/>
+<text x="744.4397905759163" y="211" font-family="monospace" font-size="11">+0.2667</text>
+<text x="20" y="243" font-family="sans-serif" font-size="12">0.6</text>
+<line x1="460" x2="748.9179755671903" y1="238" y2="238" stroke="#167d5a" stroke-width="9"/>
+<text x="756.9179755671903" y="243" font-family="monospace" font-size="11">+0.2787</text>
+<text x="20" y="275" font-family="sans-serif" font-size="12">0.7</text>
+<line x1="460" x2="764.4128646222887" y1="270" y2="270" stroke="#167d5a" stroke-width="9"/>
+<text x="772.4128646222887" y="275" font-family="monospace" font-size="11">+0.2937</text>
+<text x="20" y="307" font-family="sans-serif" font-size="12">0.8</text>
+<line x1="460" x2="770.9947643979058" y1="302" y2="302" stroke="#167d5a" stroke-width="9"/>
+<text x="778.9947643979058" y="307" font-family="monospace" font-size="11">+0.3000</text>
+<text x="20" y="339" font-family="sans-serif" font-size="12">0.9</text>
+<line x1="460" x2="778.0337405468296" y1="334" y2="334" stroke="#167d5a" stroke-width="9"/>
+<text x="786.0337405468296" y="339" font-family="monospace" font-size="11">+0.3068</text>
+<text x="20" y="371" font-family="sans-serif" font-size="12">1.0</text>
+<line x1="460" x2="790.0" y1="366" y2="366" stroke="#167d5a" stroke-width="9"/>
+<text x="798.0" y="371" font-family="monospace" font-size="11">+0.3183</text>
+<text x="430" y="398" font-family="sans-serif" font-size="12">selective accuracy</text>
+</svg>

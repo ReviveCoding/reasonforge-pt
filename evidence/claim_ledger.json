@@ -1,0 +1,75 @@
+{
+  "schema_version": 1,
+  "artifact_role": "DERIVED_PUBLIC_CLAIM_LEDGER",
+  "scientific_decision": "RETAIN_CONVENTIONAL_4B",
+  "post_cp100_result_class": "DIAGNOSTIC_ONLY",
+  "human_review": "PENDING",
+  "public_benchmark_contamination": "CANNOT_BE_EXCLUDED",
+  "three_seed_inference": "LIMITED",
+  "rcac_superiority": "NOT_ESTABLISHED",
+  "claims": [
+    {
+      "claim": "The frozen 4B decision is RETAIN_CONVENTIONAL_4B; the +0.03 gate was not met.",
+      "source_artifact": "evidence/release/PUBLIC_RELEASE_SUMMARY.json",
+      "evidence_type": "DERIVED_TRANSCRIPTION_OF_FROZEN_PRIMARY_DECISION",
+      "statistical_status": "FROZEN_PRIMARY",
+      "scientific_role": "CP100_PRIMARY",
+      "promotion_eligible": false,
+      "limitations": "The observed +0.008519 estimate is not established superiority."
+    },
+    {
+      "claim": "The 450 locked cells are 150 repeated examples across three seeds.",
+      "source_artifact": "reports/tables/statistical_sensitivity_reconciled.csv",
+      "evidence_type": "POST_FINAL_STATISTICAL_SENSITIVITY",
+      "statistical_status": "POST_FINAL_SENSITIVITY",
+      "scientific_role": "POST_CP100_DIAGNOSTIC_ONLY",
+      "promotion_eligible": false,
+      "limitations": "Three seeds are not high-powered population inference."
+    },
+    {
+      "claim": "Pooled recoveries and regressions are descriptive repeated-cell counts.",
+      "source_artifact": "reports/tables/pairwise_transitions_reconciled.csv",
+      "evidence_type": "POST_FINAL_TRANSITION_ANALYSIS",
+      "statistical_status": "DESCRIPTIVE_REPEATED_EXAMPLE_CELLS",
+      "scientific_role": "POST_CP100_DIAGNOSTIC_ONLY",
+      "promotion_eligible": false,
+      "limitations": "Do not apply independent-cell McNemar inference to pooled counts."
+    },
+    {
+      "claim": "No robust example-group-held-out routing benefit was established.",
+      "source_artifact": "reports/tables/routing_results_reconciled.csv",
+      "evidence_type": "POST_FINAL_ROUTING_VALIDATION",
+      "statistical_status": "EXPLORATORY_HELD_OUT",
+      "scientific_role": "POST_CP100_DIAGNOSTIC_ONLY",
+      "promotion_eligible": false,
+      "limitations": "Routing simulation cannot promote RCAC."
+    },
+    {
+      "claim": "Uncertainty results support association with verifier correctness only.",
+      "source_artifact": "reports/tables/uncertainty_metrics.csv",
+      "evidence_type": "DIAGNOSTIC_UNCERTAINTY_ASSOCIATION",
+      "statistical_status": "EXPLORATORY_HELD_OUT",
+      "scientific_role": "POST_CP100_DIAGNOSTIC_ONLY",
+      "promotion_eligible": false,
+      "limitations": "Not calibrated real-world, safety, or production probabilities."
+    },
+    {
+      "claim": "D115R energy is estimated by integration over observed telemetry intervals.",
+      "source_artifact": "reports/tables/systems_tail_metrics_instrumented.csv",
+      "evidence_type": "DIAGNOSTIC_SYSTEMS_REPLAY",
+      "statistical_status": "MEASURED_TELEMETRY_DERIVED_ESTIMATE",
+      "scientific_role": "POST_CP100_DIAGNOSTIC_ONLY",
+      "promotion_eligible": false,
+      "limitations": "One replay environment; device-active GPU time was not measured."
+    },
+    {
+      "claim": "Human review labels are pending and did not enter the decision.",
+      "source_artifact": "evidence/release/PUBLIC_RELEASE_SUMMARY.json",
+      "evidence_type": "DERIVED_PUBLIC_STATUS",
+      "statistical_status": "UNLABELED",
+      "scientific_role": "POST_CP100_DIAGNOSTIC_ONLY",
+      "promotion_eligible": false,
+      "limitations": "No human preference conclusion is available."
+    }
+  ]
+}

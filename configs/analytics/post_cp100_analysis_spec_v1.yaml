@@ -1,0 +1,171 @@
+schema_version: 1
+protocol_id: RFPT-D100-POST-CP100-ANALYTICS-v1
+status: FROZEN
+frozen_decision: RETAIN_CONVENTIONAL_4B
+promotion_eligible: false
+analysis_classes:
+  A_EXISTING_RESULT_ANALYTICS:
+    inputs: frozen CP100 and pre-CP100 artifacts only
+    promotion_eligible: false
+  B_POST_FINAL_EXPLORATORY_ANALYTICS:
+    inputs: frozen outcomes; exploratory analyses
+    promotion_eligible: false
+  C_NEW_BOUNDED_DIAGNOSTIC_INFERENCE:
+    inputs: outcome-blind hash-selected diagnostic prompts and frozen adapters
+    promotion_eligible: false
+  D_HUMAN_REVIEW_PACKET:
+    inputs: blinded frozen output pairs; no fabricated labels
+    promotion_eligible: false
+support_policy:
+  DESCRIPTIVE_ONLY: {minimum_n: 1, maximum_n_exclusive: 8}
+  LOW_SUPPORT: {minimum_n: 8, maximum_n_exclusive: 20}
+  STANDARD_SLICE: {minimum_n: 20}
+  confirmatory_target: 30
+  preferred_confirmatory_target: 50
+multiplicity:
+  exploratory_method: benjamini_hochberg
+  family_definition: analysis_id + endpoint + interaction_order
+  alpha: 0.05
+statistics:
+  primary_descriptive_endpoint: paired_task_score_difference_C2_minus_C1
+  bootstrap:
+    method: hierarchical_seed_then_example_paired_bootstrap
+    replicates: 20000
+    confidence: 0.95
+    rng_seed: 110100
+  binary_transition_test: exact_mcnemar_two_sided
+  permutation:
+    method: within_seed_cluster_sign_flip
+    replicates: 20000
+    rng_seed: 110108
+  equivalence:
+    label: POST_HOC_EQUIVALENCE_SENSITIVITY
+    symmetric_margins: [0.01, 0.02, 0.03, 0.04, 0.05]
+paired_transitions:
+  recovery: C1_FAIL_AND_C2_PASS
+  regression: C1_PASS_AND_C2_FAIL
+  stable_success: C1_PASS_AND_C2_PASS
+  stable_failure: C1_FAIL_AND_C2_FAIL
+  score_win: C2_SCORE_GREATER_THAN_C1
+  score_loss: C2_SCORE_LESS_THAN_C1
+  score_tie: C2_SCORE_EQUALS_C1
+slices:
+  maximum_interaction_order: 2
+  outcome_predicates_forbidden: true
+  one_way:
+    - benchmark_family
+    - difficulty_bin
+    - prompt_length_bin
+    - completion_length_bin
+    - constraint_count_bin
+    - tool_complexity_bin
+    - primary_failure
+  two_way:
+    - [benchmark_family, difficulty_bin]
+    - [benchmark_family, prompt_length_bin]
+    - [benchmark_family, completion_length_bin]
+    - [benchmark_family, constraint_count_bin]
+    - [benchmark_family, tool_complexity_bin]
+    - [difficulty_bin, completion_length_bin]
+  reporting_boundary: completion length and failure category are descriptive post-outcome slices only
+risk:
+  label: DESCRIPTIVE_DIAGNOSTIC_RISK_NOT_REAL_WORLD_HARM
+  frozen_severity_weights:
+    success: 0.0
+    minor: 1.0
+    task_blocking: 2.0
+    safety_critical: 5.0
+  failure_default_map:
+    F01: task_blocking
+    F02: task_blocking
+    F03: task_blocking
+    F04: task_blocking
+    F05: task_blocking
+    F06: task_blocking
+    F07: task_blocking
+    F08: task_blocking
+    F09: task_blocking
+    F10: safety_critical
+    F11: safety_critical
+    F12: safety_critical
+    F13: task_blocking
+    F14: task_blocking
+    F15: task_blocking
+    F16: task_blocking
+routing:
+  validation: leave_one_seed_out
+  model: depth_2_decision_tree
+  minimum_leaf_support: 20
+  allowed_features:
+    - benchmark_family
+    - task_family
+    - difficulty
+    - prompt_tokens
+    - number_of_constraints
+    - tool_count
+    - number_of_available_tools
+    - number_of_required_tools
+    - multi_turn
+    - stateful
+    - authorization_class
+  forbidden_features:
+    - c1_score
+    - c2_score
+    - difference
+    - binary_success
+    - failure_labels
+    - completion
+    - completion_tokens
+    - answer_embeddings
+perturbations:
+  selection: deterministic_sha256_rank
+  reasoning: official_apple_gsm_symbolic_as_is_if_license_and_revision_verified
+  instruction:
+    - instruction_order_permutation
+    - harmless_irrelevant_sentence
+    - formatting_neutral_wrapper
+  tool:
+    - available_tool_order
+    - parameter_order
+    - irrelevant_tool_injection
+    - equivalent_description_formatting
+  semantics_must_remain_unchanged: true
+stochastic_generation:
+  selection_salt: RFPT-D112-STOCHASTIC-v1
+  examples_per_major_family: 20
+  families: [instruction, reasoning/arithmetic, stateful_tool]
+  seeds: [1701, 1702, 1703]
+  arms: [C1, C2]
+  rollouts_per_example: 5
+  temperature: 0.7
+  top_p: 0.95
+  max_new_tokens: 256
+generation_policy_sensitivity:
+  selection_salt: RFPT-D114-GENERATION-v1
+  examples_per_family: 8
+  max_new_tokens: [128, 256, 512]
+  enable_thinking: false
+systems_replay:
+  selection_salt: RFPT-D115-SYSTEMS-v1
+  examples_per_family: 6
+  blocks: 4
+  counterbalanced_arm_order: true
+  telemetry_cadence_seconds: 1
+  device_fields:
+    - utilization_gpu_percent
+    - memory_used_mib
+    - power_draw_watts_if_supported
+    - temperature_c
+    - graphics_clock_mhz
+human_review:
+  selection_salt: RFPT-D116-HUMAN-v1
+  target_pairs: 60
+  randomization_seed: 116100
+  labels_may_be_fabricated: false
+reporting_boundaries:
+  - CP100 and E47 remain authoritative.
+  - All post-final findings are diagnostic and non-promotion-eligible.
+  - Three seeds are not high-powered population inference.
+  - Public-benchmark pretraining contamination cannot be excluded.
+  - No causal interpretation is permitted from descriptive associations.
+  - Unmeasured telemetry remains unavailable.
