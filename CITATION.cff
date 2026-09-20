@@ -3,5 +3,5 @@ message: "If you use this software or its public aggregate results, please cite 
 title: "ReasonForge-PT: Evidence-controlled post-training and evaluation on Qwen3-4B"
 type: software
 authors:
-  - name: "ReasonForge-PT contributors"
+  - name: "Jinwoo Bae"
 version: "0.1.0"
