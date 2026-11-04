@@ -253,9 +253,7 @@ def reward_completion(
         )
     else:
         raise ValueError(f"unsupported family: {family}")
-    hard_checks: dict[str, bool | None] = {
-        constraint: None for constraint in policy.hard_constraints
-    }
+    hard_checks: dict[str, bool | None] = dict.fromkeys(policy.hard_constraints)
     hard_vetoed = False
     if family == "stateful_tool":
         dimensions = scoring.get("dimensions", {})
